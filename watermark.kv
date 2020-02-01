@@ -1,0 +1,35 @@
+#:kivy 1.0.9
+
+<MainWindow>:
+    images_path: images_path
+    masks_path: masks_path
+
+    FloatLayout:
+        Label:
+            text: "Path to image dir"
+            pos_hint: {"x": 0.6, "top": 3.2}
+
+        TextInput
+            id: images_path
+            multiline: False
+            pos_hint: {"x": 0.5, "top": 2.5}
+            size_hint: 5.5, 0.35
+            text: "C:\\Users\\Alpha\\Desktop\\watermark\\images"
+
+        Label:
+            text: "Path to masks dir"
+            pos_hint: {"x": 0.6, "top": 2.2}
+
+        TextInput
+            id: masks_path
+            multiline: False
+            pos_hint: {"x": 0.5, "top": 1.5}
+            size_hint: 5.5, 0.35
+            text: "C:\\Users\\Alpha\\Desktop\\watermark\\masks"
+
+        Button:
+            pos_hint: {"x": 4, "top": 1}
+            size_hint: 2, 0.35
+            text: "Run"
+            on_release:
+                root.run_button()
